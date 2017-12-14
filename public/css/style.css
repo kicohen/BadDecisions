@@ -1,0 +1,283 @@
+body, html{
+  padding:0;
+  margin:0;
+  width:100%;
+  min-height:100vh;
+  max-height: 100vh;
+  color: white;
+  background-color:#2E2E2E;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 4vw;
+  }
+}
+
+body{
+  background: url('http://www.kicohen.com/background-01.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ----------------------------------------- */
+/*                 Home Page                 */
+/* ----------------------------------------- */
+
+#title-block {
+  width: 100%;
+  height: calc(100vh - 8%);
+  text-align: center;
+  padding-top: 8%;
+}
+
+#title-block h1 {
+  font-weight: 200;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#title-block h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+#title-block a{
+  background-color: white;
+  border: none;
+  color: #212e66;
+  padding: 7px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border-radius: 22px;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+#title-block a:hover{
+  background-color: #9b9da0;
+}
+
+#logo {
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+#logo a{
+  text-decoration: none;
+  color: white;
+}
+
+#logo a:hover{
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  background-position: 0 95%;
+  background-size: 100% 1px;
+}
+
+/* ----------------------------------------- */
+/*               Question Page               */
+/* ----------------------------------------- */
+
+#question-page {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-weight: 100;
+}
+
+.question {
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+.answers{
+  margin: 0;
+  padding: 0;
+  font-size: 1.7rem;
+  list-style-type: none;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.answers li{ 
+  margin-top: 30px;
+}
+
+.question span {
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  background-position: 0 95%;
+  background-size: 100% 1px;
+}
+
+.answers span:hover {
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  background-position: 0 95%;
+  background-size: 100% 1px;
+}
+
+/* ----------------------------------------- */
+/*                 Form Page                 */
+/* ----------------------------------------- */
+
+
+#form-page {
+  width: 90%;
+  margin-left: 10%;
+}
+
+#form-page h3{
+  font-weight: 100;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+#form-page input{
+  border: 0;
+  border-bottom: 2px solid #9b9da0;
+  font-size: 3rem;
+  background: transparent;
+  color: #9b9da0;
+  padding-right: 30px;
+  font-weight: 100;
+  width: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+  #form-page input{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #form-page input{
+    font-size: 1rem;
+  }
+}
+
+input:focus {
+    outline:none;
+}
+
+::-webkit-input-placeholder {
+  color: #9b9da0;
+}
+::-moz-placeholder {
+  color: #9b9da0;
+}
+:-ms-input-placeholder {
+  color: #9b9da0;
+}
+:-moz-placeholder {
+  color: #9b9da0;
+}
+
+/* ----------------------------------------- */
+/*                 List Page                 */
+/* ----------------------------------------- */
+
+#list-page {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+
+#list-page h3{
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+#list-page h3 span {
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  background-position: 0 95%;
+  background-size: 100% 1px;
+}
+
+#list-page ul{
+  margin: 0;
+  padding: 0;
+  font-size: 1.7rem;
+  list-style-type: none;
+}
+
+#list-page li{ 
+  margin-top: 50px;
+}
+
+#list-page li span:hover {
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  background-position: 0 95%;
+  background-size: 100% 1px;
+}
+
+/* ----------------------------------------- */
+/*               Results Page                */
+/* ----------------------------------------- */
+
+#results-page {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-weight: 100;
+}
+
+#results-page h3 {
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+#results-page h3 span{
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+#results-page ul {
+  text-align: left;
+  list-style-type: none;
+  line-height: 0.5rem;
+}
+
+#results-page li {
+  margin-bottom: 60px;
+}
+
+#results-page li div{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  height: 3px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#results-page span {
+  margin: 0;
+  padding: 0;
+  font-size: 0.4rem;
+  font-weight: 100;
+}

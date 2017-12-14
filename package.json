@@ -1,0 +1,21 @@
+{
+  "name": "Bad-Decisions",
+  "version": "1.0.0",
+  "description": "Homework for 67-328",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Kenny Cohen",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "mongoose": "^4.13.4",
+    "mongoose-geojson-schema": "^2.1.2",
+    "morgan": "^1.9.0",
+    "socket.io": "*"
+  }
+}
