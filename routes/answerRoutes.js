@@ -1,8 +1,19 @@
 var Answer = require('../models/answer');
 
-// *********************************************************************
-//                              Helpers
-// *********************************************************************
+getTotal = function(answers) {
+	var total = 0;
+	for (var i = 0; i < answers.length; i++) {
+		total += answers[i].score;
+	}
+	for (var i = 0; i < answers.length; i++) {
+		answers[i].percentage = (answers[i].score / total) * 100;
+	}
+	return answers;
+}
+
+function cleanAnswer(answer) {
+	return answer.replace(/^\s+|\s+$/g, '');
+}
 
 exports.createAnswer = function(description, question_id, callback) {
 	var answer = new Answer({
@@ -24,17 +35,6 @@ exports.getAnswersByQuestion = function(question_id, callback){
 	}).lean().exec();
 }
 
-getTotal = function(answers) {
-	var total = 0;
-	for (var i = 0; i < answers.length; i++) {
-		total += answers[i].score;
-	}
-	for (var i = 0; i < answers.length; i++) {
-		answers[i].percentage = (answers[i].score / total) * 100;
-	}
-	return answers;
-}
-
 exports.incrementAnswerScore = function(answer_id, callback) {
 	Answer.findById(answer_id, function(err, answer) {
 		if (err) throw err;
@@ -46,8 +46,4 @@ exports.incrementAnswerScore = function(answer_id, callback) {
 			else callback();
 		});
 	});
-}
-
-function cleanAnswer(answer) {
-	return answer.replace(/^\s+|\s+$/g, '');
 }
